@@ -1,0 +1,57 @@
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import PlaceholderImage from '../components/PlaceholderImage'
+
+const slides = [
+  'Obra destacada 1',
+  'Obra destacada 2',
+  'Obra destacada 3',
+  'Obra destacada 4',
+  'Obra destacada 5',
+]
+
+export default function Home() {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000)
+    return () => clearInterval(id)
+  }, [])
+
+  return (
+    <div className="max-w-6xl mx-auto px-6 md:px-10 pt-10 pb-20">
+      <div className="relative">
+        <PlaceholderImage label={slides[index]} aspect="aspect-[21/9]" className="w-full" />
+        <div className="absolute bottom-4 right-4 text-xs text-white/90 bg-black/30 px-2 py-1 rounded">
+          {index + 1}/{slides.length}
+        </div>
+        <div className="flex justify-center gap-2 mt-4">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              aria-label={`Ir a la imagen ${i + 1}`}
+              onClick={() => setIndex(i)}
+              className={`h-1.5 w-1.5 rounded-full transition-colors ${
+                i === index ? 'bg-ink' : 'bg-stone-300'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-16 text-center max-w-2xl mx-auto">
+        <p className="text-fog leading-relaxed">
+          Macarena Vicuña (Macaví) es una artista visual chilena que trabaja la figura humana,
+          el paisaje y la escultura. Este texto es un placeholder — se reemplaza por la
+          presentación real una vez que definamos el contenido.
+        </p>
+        <Link
+          to="/obras"
+          className="inline-block mt-6 text-sm tracking-widest2 uppercase border-b border-ink pb-1 hover:opacity-70 transition-opacity"
+        >
+          Ver obras
+        </Link>
+      </div>
+    </div>
+  )
+}
