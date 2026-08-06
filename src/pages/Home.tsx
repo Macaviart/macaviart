@@ -1,14 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { usePageTitle } from '../hooks/usePageTitle'
+import homeData from '../content/home.json'
 
-const slides = [
-  '/images/home/home-01.jpg',
-  '/images/home/home-02.jpg',
-  '/images/home/home-03.jpg',
-  '/images/home/home-04.jpg',
-  '/images/home/home-05.jpg',
-]
+const slides = homeData.carrusel
 
 export default function Home() {
   usePageTitle('Macaví | Macarena Vicuña, Artista Visual')
@@ -45,11 +40,7 @@ export default function Home() {
       </div>
 
       <div className="mt-16 text-center max-w-2xl mx-auto">
-        <p className="text-fog leading-relaxed">
-          Macarena Vicuña (Macaví) es una artista visual chilena que trabaja la figura humana,
-          el paisaje y la escultura. Este texto es un placeholder — se reemplaza por la
-          presentación real una vez que definamos el contenido.
-        </p>
+        <p className="text-fog leading-relaxed">{homeData.texto}</p>
         <Link
           to="/obras"
           className="inline-block mt-6 text-sm tracking-widest2 uppercase border-b border-ink pb-1 hover:opacity-70 transition-opacity"

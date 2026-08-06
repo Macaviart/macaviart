@@ -1,0 +1,98 @@
+backend:
+  name: github
+  repo: Macaviart/macaviart
+  branch: main
+  base_url: https://macaviart.cl
+  auth_endpoint: auth
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "home"
+    label: "Inicio"
+    files:
+      - file: "src/content/home.json"
+        label: "Página de Inicio"
+        name: "home"
+        fields:
+          - label: "Carrusel de imágenes"
+            name: "carrusel"
+            widget: "list"
+            field: { label: "Imagen", name: "imagen", widget: "image" }
+          - label: "Texto de presentación"
+            name: "texto"
+            widget: "text"
+
+  - name: "obras"
+    label: "Obras"
+    files:
+      - file: "src/content/obras.json"
+        label: "Series de Obras"
+        name: "obras"
+        fields:
+          - label: "Series"
+            name: "series"
+            widget: "list"
+            summary: "{{titulo}} ({{fields.imagenes}} imágenes)"
+            fields:
+              - { label: "Slug (URL, no cambiar)", name: "slug", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - label: "Imágenes"
+                name: "imagenes"
+                widget: "list"
+                field: { label: "Imagen", name: "imagen", widget: "image" }
+
+  - name: "artista"
+    label: "Nota de Artista"
+    files:
+      - file: "src/content/notaArtista.json"
+        label: "Nota de Artista"
+        name: "notaArtista"
+        fields:
+          - label: "Secciones"
+            name: "secciones"
+            widget: "list"
+            summary: "{{tituloEs}}"
+            fields:
+              - { label: "Título (Español)", name: "tituloEs", widget: "string" }
+              - { label: "Título (Inglés)", name: "tituloEn", widget: "string" }
+              - { label: "Epígrafe (Español)", name: "epigrafeEs", widget: "string", required: false }
+              - { label: "Epígrafe (Inglés)", name: "epigrafeEn", widget: "string", required: false }
+              - label: "Párrafos (Español)"
+                name: "parrafosEs"
+                widget: "list"
+                field: { label: "Párrafo", name: "parrafo", widget: "text" }
+              - label: "Párrafos (Inglés)"
+                name: "parrafosEn"
+                widget: "list"
+                field: { label: "Párrafo", name: "parrafo", widget: "text" }
+
+  - name: "clases"
+    label: "Clases"
+    files:
+      - file: "src/content/clases.json"
+        label: "Página de Clases"
+        name: "clases"
+        fields:
+          - label: "Texto"
+            name: "texto"
+            widget: "text"
+          - label: "Imágenes"
+            name: "imagenes"
+            widget: "list"
+            required: false
+            field: { label: "Imagen", name: "imagen", widget: "image" }
+
+  - name: "contacto"
+    label: "Contacto"
+    files:
+      - file: "src/content/contacto.json"
+        label: "Datos de Contacto"
+        name: "contacto"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Instagram (URL)", name: "instagram", widget: "string" }
+          - { label: "Facebook (URL)", name: "facebook", widget: "string" }

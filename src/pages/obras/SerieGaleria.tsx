@@ -32,7 +32,7 @@ export default function SerieGaleria() {
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Array.from({ length: serie.cantidadPlaceholder }).map((_, i) => (
+          {Array.from({ length: 6 }).map((_, i) => (
             <PlaceholderImage key={i} label={`${serie.titulo} ${i + 1}`} aspect="aspect-[4/3]" />
           ))}
         </div>

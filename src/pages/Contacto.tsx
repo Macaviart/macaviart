@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react'
 import { Instagram, Facebook } from 'lucide-react'
 import { usePageTitle } from '../hooks/usePageTitle'
+import contactoData from '../content/contacto.json'
 
 // El envío aún no está conectado a ningún servicio (Formspree, etc.) — solo simula éxito.
 // Conectar a un backend real antes de publicar el sitio.
@@ -61,12 +62,12 @@ export default function Contacto() {
       )}
 
       <div className="mt-14 flex flex-col items-center gap-3 text-fog text-sm">
-        <a href="mailto:contacto@macaviart.cl" className="hover:text-ink transition-colors">
-          contacto@macaviart.cl
+        <a href={`mailto:${contactoData.email}`} className="hover:text-ink transition-colors">
+          {contactoData.email}
         </a>
         <div className="flex items-center gap-5">
           <a
-            href="https://instagram.com/macaviart"
+            href={contactoData.instagram}
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
@@ -75,7 +76,7 @@ export default function Contacto() {
             <Instagram size={20} />
           </a>
           <a
-            href="https://facebook.com/macavicu"
+            href={contactoData.facebook}
             target="_blank"
             rel="noreferrer"
             aria-label="Facebook"

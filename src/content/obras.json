@@ -1,0 +1,107 @@
+{
+  "series": [
+  {
+    "slug": "botes",
+    "titulo": "Botes",
+    "imagenes": [
+      "/images/obras/botes/botes-01.jpg",
+      "/images/obras/botes/botes-02.jpg",
+      "/images/obras/botes/botes-03.jpg"
+    ]
+  },
+  {
+    "slug": "caballos",
+    "titulo": "Caballos",
+    "imagenes": [
+      "/images/obras/caballos/caballos-01.jpg",
+      "/images/obras/caballos/caballos-02.jpg",
+      "/images/obras/caballos/caballos-03.jpg",
+      "/images/obras/caballos/caballos-04.jpg"
+    ]
+  },
+  {
+    "slug": "instantes-permanentes",
+    "titulo": "Instantes Permanentes",
+    "imagenes": [
+      "/images/obras/instantes-permanentes/instantes-permanentes-01.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-02.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-03.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-04.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-05.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-06.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-07.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-08.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-09.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-10.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-11.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-12.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-13.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-14.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-15.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-16.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-17.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-18.jpg",
+      "/images/obras/instantes-permanentes/instantes-permanentes-19.jpg"
+    ]
+  },
+  {
+    "slug": "figura-humana",
+    "titulo": "Figura Humana",
+    "imagenes": [
+      "/images/obras/figura-humana/figura-humana-01.jpg",
+      "/images/obras/figura-humana/figura-humana-02.jpg",
+      "/images/obras/figura-humana/figura-humana-03.jpg",
+      "/images/obras/figura-humana/figura-humana-04.jpg",
+      "/images/obras/figura-humana/figura-humana-05.jpg",
+      "/images/obras/figura-humana/figura-humana-06.jpg",
+      "/images/obras/figura-humana/figura-humana-07.jpg",
+      "/images/obras/figura-humana/figura-humana-08.jpg",
+      "/images/obras/figura-humana/figura-humana-09.jpg",
+      "/images/obras/figura-humana/figura-humana-10.jpg",
+      "/images/obras/figura-humana/figura-humana-11.jpg",
+      "/images/obras/figura-humana/figura-humana-12.jpg",
+      "/images/obras/figura-humana/figura-humana-13.jpg",
+      "/images/obras/figura-humana/figura-humana-14.jpg"
+    ]
+  },
+  {
+    "slug": "de-norte-a-sur",
+    "titulo": "De Norte a Sur",
+    "imagenes": [
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-01.jpg",
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-02.jpg",
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-03.jpg",
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-04.jpg",
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-05.jpg",
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-06.jpg",
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-07.jpg",
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-08.jpg",
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-09.jpg",
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-10.jpg",
+      "/images/obras/de-norte-a-sur/de-norte-a-sur-11.jpg"
+    ]
+  },
+  {
+    "slug": "esculturas",
+    "titulo": "Esculturas",
+    "imagenes": [
+      "/images/obras/esculturas/esculturas-01.jpg",
+      "/images/obras/esculturas/esculturas-02.jpg",
+      "/images/obras/esculturas/esculturas-03.jpg",
+      "/images/obras/esculturas/esculturas-04.jpg",
+      "/images/obras/esculturas/esculturas-05.jpg",
+      "/images/obras/esculturas/esculturas-06.jpg",
+      "/images/obras/esculturas/esculturas-07.jpg"
+    ]
+  },
+  {
+    "slug": "grabados",
+    "titulo": "Grabados",
+    "imagenes": [
+      "/images/obras/grabados/grabados-01.jpg",
+      "/images/obras/grabados/grabados-02.jpg",
+      "/images/obras/grabados/grabados-03.jpg"
+    ]
+  }
+  ]
+}
