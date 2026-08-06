@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import PlaceholderImage from '../components/PlaceholderImage'
 
 const slides = [
-  'Obra destacada 1',
-  'Obra destacada 2',
-  'Obra destacada 3',
-  'Obra destacada 4',
-  'Obra destacada 5',
+  '/images/home/home-01.jpg',
+  '/images/home/home-02.jpg',
+  '/images/home/home-03.jpg',
+  '/images/home/home-04.jpg',
+  '/images/home/home-05.jpg',
 ]
 
 export default function Home() {
@@ -21,7 +20,11 @@ export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-10 pt-10 pb-20">
       <div className="relative">
-        <PlaceholderImage label={slides[index]} aspect="aspect-[21/9]" className="w-full" />
+        <img
+          src={slides[index]}
+          alt={`Obra destacada ${index + 1}`}
+          className="aspect-[21/9] w-full object-cover border border-hairline"
+        />
         <div className="absolute bottom-4 right-4 text-xs text-white/90 bg-black/30 px-2 py-1 rounded">
           {index + 1}/{slides.length}
         </div>

@@ -53,11 +53,8 @@ export default function Nav() {
   return (
     <header className="border-b border-hairline bg-white/95 backdrop-blur sticky top-0 z-30">
       <div className="max-w-6xl mx-auto px-6 md:px-10 flex items-center justify-between h-24">
-        <Link to="/" className="flex flex-col leading-none">
-          <span className="font-logo text-4xl text-fog">macaví</span>
-          <span className="text-[11px] tracking-widest2 uppercase text-stone-400 mt-1">
-            Macarena Vicuña | Artista Visual
-          </span>
+        <Link to="/" className="flex items-center">
+          <img src="/images/logo-maca.png" alt="Macaví — Macarena Vicuña, Artista Visual" className="h-14 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
