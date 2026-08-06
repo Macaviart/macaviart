@@ -1,9 +1,11 @@
 import { FormEvent, useState } from 'react'
 import { Instagram, Facebook } from 'lucide-react'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 // El envío aún no está conectado a ningún servicio (Formspree, etc.) — solo simula éxito.
 // Conectar a un backend real antes de publicar el sitio.
 export default function Contacto() {
+  usePageTitle('Contacto | Macaví')
   const [enviado, setEnviado] = useState(false)
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {

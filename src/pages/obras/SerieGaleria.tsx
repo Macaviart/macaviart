@@ -1,10 +1,13 @@
 import { useParams, Navigate } from 'react-router-dom'
 import PlaceholderImage from '../../components/PlaceholderImage'
 import { getSerieBySlug, getImagenesSerie } from '../../data/obras'
+import { usePageTitle } from '../../hooks/usePageTitle'
 
 export default function SerieGaleria() {
   const { slug } = useParams<{ slug: string }>()
   const serie = slug ? getSerieBySlug(slug) : undefined
+
+  usePageTitle(serie ? `${serie.titulo} — Obras | Macaví` : 'Obras | Macaví')
 
   if (!serie) return <Navigate to="/obras" replace />
 

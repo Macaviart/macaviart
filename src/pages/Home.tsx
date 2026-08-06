@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 const slides = [
   '/images/home/home-01.jpg',
@@ -10,6 +11,7 @@ const slides = [
 ]
 
 export default function Home() {
+  usePageTitle('Macaví | Macarena Vicuña, Artista Visual')
   const [index, setIndex] = useState(0)
 
   useEffect(() => {

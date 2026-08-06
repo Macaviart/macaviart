@@ -1,6 +1,8 @@
 import { notas } from '../../data/prensa'
+import { usePageTitle } from '../../hooks/usePageTitle'
 
 export default function Prensa() {
+  usePageTitle('Prensa | Macaví')
   return (
     <div className="max-w-5xl mx-auto px-6 md:px-10 py-16">
       <h1 className="text-center text-sm tracking-widest2 uppercase text-fog mb-4">Prensa</h1>

@@ -1,4 +1,5 @@
 import { categorias, type CvItem } from '../../data/exhibiciones'
+import { usePageTitle } from '../../hooks/usePageTitle'
 
 function Entry({ item, showYear }: { item: CvItem; showYear: boolean }) {
   return (
@@ -15,6 +16,7 @@ function Entry({ item, showYear }: { item: CvItem; showYear: boolean }) {
 }
 
 export default function ExhibicionesYEstudios() {
+  usePageTitle('Exhibiciones y Estudios | Macaví')
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-10 py-16">
       <div className="text-center mb-16">
