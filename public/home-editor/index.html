@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Editor de Home | Macaví</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+    color: #2b2b2b;
+    background: #fff;
+  }
+  h1 { font-size: 15px; letter-spacing: 0.15em; text-transform: uppercase; color: #8a8a8a; text-align: center; margin-bottom: 32px; }
+  h2 { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a8a8a; margin: 40px 0 16px; border-bottom: 1px solid #e5e3df; padding-bottom: 8px; }
+  .card { border: 1px solid #e5e3df; padding: 16px; margin-bottom: 14px; border-radius: 4px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+  .row > div { flex: 1; min-width: 130px; }
+  label { display: block; font-size: 11px; text-transform: uppercase; color: #8a8a8a; margin-bottom: 4px; letter-spacing: 0.05em; }
+  input[type=text], textarea, select, input[type=password] {
+    width: 100%; padding: 8px; border: 1px solid #e5e3df; font-size: 14px; font-family: inherit; border-radius: 3px;
+  }
+  textarea { min-height: 70px; resize: vertical; }
+  input[type=color] { width: 100%; height: 36px; border: 1px solid #e5e3df; border-radius: 3px; padding: 2px; }
+  button { cursor: pointer; border: 1px solid #2b2b2b; background: #2b2b2b; color: #fff; padding: 8px 14px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 3px; }
+  button.secondary { background: #fff; color: #2b2b2b; }
+  button.small { padding: 4px 8px; font-size: 11px; }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  .imgRow { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .imgRow img { width: 90px; height: 40px; object-fit: cover; border: 1px solid #e5e3df; }
+  .imgActions { display: flex; gap: 6px; flex-wrap: wrap; }
+  .checkboxRow { display: flex; align-items: center; gap: 6px; margin-top: 10px; }
+  .checkboxRow input { width: auto; }
+  #login { text-align: center; margin-top: 100px; }
+  #login input { max-width: 260px; margin: 0 auto 12px; }
+  #app { display: none; }
+  #status { position: fixed; bottom: 0; left: 0; right: 0; text-align: center; padding: 12px; font-size: 13px; }
+  #status.ok { background: #eef7ee; color: #2f6b2f; }
+  #status.err { background: #fdecec; color: #a33; }
+  .saveBar { position: sticky; bottom: 0; background: #fff; border-top: 1px solid #e5e3df; padding: 16px 0; text-align: center; margin-top: 30px; }
+  .hint { font-size: 12px; color: #8a8a8a; margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div id="login">
+  <h1>Editor de Home</h1>
+  <input type="password" id="pw" placeholder="Contraseña" />
+  <br />
+  <button onclick="login()">Entrar</button>
+</div>
+
+<div id="app">
+  <h1>Editor de Home</h1>
+
+  <h2>Carrusel de imágenes</h2>
+  <div id="carrusel"></div>
+  <button class="secondary" onclick="agregarImagen()">+ Agregar imagen</button>
+
+  <h2>Texto central</h2>
+  <div id="parrafos"></div>
+  <button class="secondary" onclick="agregarParrafo()">+ Agregar párrafo</button>
+
+  <div class="saveBar">
+    <button onclick="guardarTodo()" id="btnGuardar">Guardar cambios</button>
+    <div class="hint">Los cambios se publican solos en unos minutos.</div>
+  </div>
+</div>
+
+<div id="status"></div>
+
+<script>
+let password = '';
+let data = { carrusel: [], parrafos: [] };
+let nuevasImagenes = {}; // index -> {nombre, base64}
+
+function showStatus(msg, ok) {
+  const el = document.getElementById('status');
+  el.textContent = msg;
+  el.className = ok ? 'ok' : 'err';
+  el.style.display = 'block';
+  setTimeout(() => { el.style.display = 'none'; }, 5000);
+}
+
+async function login() {
+  password = document.getElementById('pw').value;
+  const res = await fetch('/api/editor/home');
+  if (!res.ok) { showStatus('No se pudo cargar el contenido', false); return; }
+  data = await res.json();
+  document.getElementById('login').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  render();
+}
+
+function render() {
+  renderCarrusel();
+  renderParrafos();
+}
+
+function renderCarrusel() {
+  const c = document.getElementById('carrusel');
+  c.innerHTML = '';
+  data.carrusel.forEach((src, i) => {
+    const preview = nuevasImagenes[i] ? nuevasImagenes[i].base64 : src;
+    const div = document.createElement('div');
+    div.className = 'imgRow';
+    div.innerHTML = `
+      <img src="${preview}" />
+      <div class="imgActions">
+        <button class="small secondary" onclick="moverImagen(${i}, -1)">↑</button>
+        <button class="small secondary" onclick="moverImagen(${i}, 1)">↓</button>
+        <label class="small secondary" style="display:inline-block;padding:4px 8px;border:1px solid #2b2b2b;border-radius:3px;cursor:pointer;">
+          Reemplazar
+          <input type="file" accept="image/*" style="display:none" onchange="reemplazarImagen(${i}, this.files[0])" />
+        </label>
+        <button class="small secondary" onclick="quitarImagen(${i})">Quitar</button>
+      </div>
+    `;
+    c.appendChild(div);
+  });
+}
+
+function moverImagen(i, dir) {
+  const j = i + dir;
+  if (j < 0 || j >= data.carrusel.length) return;
+  [data.carrusel[i], data.carrusel[j]] = [data.carrusel[j], data.carrusel[i]];
+  const tmp = nuevasImagenes[i]; nuevasImagenes[i] = nuevasImagenes[j]; nuevasImagenes[j] = tmp;
+  render();
+}
+
+function quitarImagen(i) {
+  data.carrusel.splice(i, 1);
+  delete nuevasImagenes[i];
+  render();
+}
+
+function reemplazarImagen(i, file) {
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    nuevasImagenes[i] = { nombre: data.carrusel[i].split('/').pop(), base64: reader.result };
+    render();
+  };
+  reader.readAsDataURL(file);
+}
+
+function agregarImagen() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*';
+  input.onchange = () => {
+    const file = input.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const n = data.carrusel.length + 1;
+      const nombre = 'home-' + String(n).padStart(2, '0') + '.jpg';
+      const path = '/images/home/' + nombre;
+      data.carrusel.push(path);
+      nuevasImagenes[data.carrusel.length - 1] = { nombre, base64: reader.result };
+      render();
+    };
+    reader.readAsDataURL(file);
+  };
+  input.click();
+}
+
+const opcionesAlineacion = ['izquierda', 'centro', 'derecha', 'justificado'];
+const opcionesTamano = ['pequeño', 'normal', 'grande', 'muy-grande'];
+const opcionesTipografia = ['sans', 'serif', 'cursiva'];
+
+function renderParrafos() {
+  const c = document.getElementById('parrafos');
+  c.innerHTML = '';
+  data.parrafos.forEach((p, i) => {
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML = `
+      <label>Texto</label>
+      <textarea onchange="data.parrafos[${i}].texto = this.value">${p.texto}</textarea>
+      <div class="row">
+        <div>
+          <label>Alineación</label>
+          <select onchange="data.parrafos[${i}].alineacion = this.value">
+            ${opcionesAlineacion.map(o => `<option value="${o}" ${o === p.alineacion ? 'selected' : ''}>${o}</option>`).join('')}
+          </select>
+        </div>
+        <div>
+          <label>Tamaño</label>
+          <select onchange="data.parrafos[${i}].tamano = this.value">
+            ${opcionesTamano.map(o => `<option value="${o}" ${o === p.tamano ? 'selected' : ''}>${o}</option>`).join('')}
+          </select>
+        </div>
+        <div>
+          <label>Tipografía</label>
+          <select onchange="data.parrafos[${i}].tipografia = this.value">
+            ${opcionesTipografia.map(o => `<option value="${o}" ${o === p.tipografia ? 'selected' : ''}>${o}</option>`).join('')}
+          </select>
+        </div>
+        <div>
+          <label>Color</label>
+          <input type="color" value="${p.color || '#78766f'}" onchange="data.parrafos[${i}].color = this.value" />
+        </div>
+      </div>
+      <div class="checkboxRow">
+        <input type="checkbox" ${p.negrita ? 'checked' : ''} onchange="data.parrafos[${i}].negrita = this.checked" />
+        <label style="margin:0;">Negrita</label>
+      </div>
+      <div class="row">
+        <button class="small secondary" onclick="moverParrafo(${i}, -1)">↑ Mover arriba</button>
+        <button class="small secondary" onclick="moverParrafo(${i}, 1)">↓ Mover abajo</button>
+        <button class="small secondary" onclick="quitarParrafo(${i})">Eliminar párrafo</button>
+      </div>
+    `;
+    c.appendChild(div);
+  });
+}
+
+function moverParrafo(i, dir) {
+  const j = i + dir;
+  if (j < 0 || j >= data.parrafos.length) return;
+  [data.parrafos[i], data.parrafos[j]] = [data.parrafos[j], data.parrafos[i]];
+  render();
+}
+
+function quitarParrafo(i) {
+  data.parrafos.splice(i, 1);
+  render();
+}
+
+function agregarParrafo() {
+  data.parrafos.push({ texto: 'Nuevo párrafo', alineacion: 'centro', tamano: 'normal', tipografia: 'sans', negrita: false, color: '#78766f' });
+  render();
+}
+
+async function guardarTodo() {
+  const btn = document.getElementById('btnGuardar');
+  btn.disabled = true;
+  btn.textContent = 'Guardando...';
+  try {
+    for (const i of Object.keys(nuevasImagenes)) {
+      const img = nuevasImagenes[i];
+      const res = await fetch('/api/editor/home', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password, data, nuevaImagen: img }),
+      });
+      const j = await res.json();
+      if (!res.ok) throw new Error(j.error || 'Error al subir imagen');
+    }
+    const res = await fetch('/api/editor/home', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password, data }),
+    });
+    const j = await res.json();
+    if (!res.ok) throw new Error(j.error || 'Error al guardar');
+    nuevasImagenes = {};
+    showStatus('Guardado. El sitio se va a actualizar en unos minutos.', true);
+  } catch (e) {
+    showStatus('Error: ' + e.message, false);
+  }
+  btn.disabled = false;
+  btn.textContent = 'Guardar cambios';
+}
+</script>
+</body>
+</html>
