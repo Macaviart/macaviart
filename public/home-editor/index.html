@@ -87,12 +87,24 @@ function showStatus(msg, ok) {
 
 async function login() {
   password = document.getElementById('pw').value;
-  const res = await fetch('/api/editor/home');
-  if (!res.ok) { showStatus('No se pudo cargar el contenido', false); return; }
-  data = await res.json();
-  document.getElementById('login').style.display = 'none';
-  document.getElementById('app').style.display = 'block';
-  render();
+  const btn = document.querySelector('#login button');
+  btn.disabled = true;
+  btn.textContent = 'Entrando...';
+  try {
+    const res = await fetch('/api/editor/home', {
+      headers: { 'X-Editor-Password': password },
+    });
+    const j = await res.json();
+    if (res.status === 401) { showStatus('Contraseña incorrecta', false); return; }
+    if (!res.ok) { showStatus(j.error || 'No se pudo cargar el contenido', false); return; }
+    data = j;
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    render();
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Entrar';
+  }
 }
 
 function render() {

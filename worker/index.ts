@@ -127,6 +127,10 @@ export default {
     }
 
     if (url.pathname === '/api/editor/home' && request.method === 'GET') {
+      const password = request.headers.get('X-Editor-Password') ?? ''
+      if (password !== env.EDITOR_PASSWORD) {
+        return jsonResponse({ error: 'Contraseña incorrecta' }, 401)
+      }
       const file = await githubGetFile(HOME_PATH, env)
       if (!file) return jsonResponse({ error: 'No se pudo leer el contenido' }, 500)
       const content = JSON.parse(utf8FromBase64(file.content)) as HomeContent
