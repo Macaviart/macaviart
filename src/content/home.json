@@ -6,5 +6,14 @@
     "/images/home/home-04.jpg",
     "/images/home/home-05.jpg"
   ],
-  "texto": "Macarena Vicuña (Macaví) es una artista visual chilena que trabaja la figura humana, el paisaje y la escultura. Este texto es un placeholder — se reemplaza por la presentación real una vez que definamos el contenido."
+  "parrafos": [
+    {
+      "texto": "Macarena Vicuña (Macaví) es una artista visual chilena que trabaja la figura humana, el paisaje y la escultura. Este texto es un placeholder — se reemplaza por la presentación real una vez que definamos el contenido.",
+      "alineacion": "centro",
+      "negrita": false,
+      "tamano": "normal",
+      "color": "#78766f",
+      "tipografia": "sans"
+    }
+  ]
 }

@@ -21,10 +21,42 @@ collections:
           - label: "Carrusel de imágenes"
             name: "carrusel"
             widget: "list"
+            hint: "Arrastrá para reordenar. Usá el botón para reemplazar o agregar fotos."
             field: { label: "Imagen", name: "imagen", widget: "image" }
-          - label: "Texto de presentación"
-            name: "texto"
-            widget: "text"
+          - label: "Texto central"
+            name: "parrafos"
+            widget: "list"
+            summary: "{{fields.texto}}"
+            fields:
+              - { label: "Texto", name: "texto", widget: "text" }
+              - label: "Alineación"
+                name: "alineacion"
+                widget: "select"
+                default: "centro"
+                options:
+                  - { label: "Izquierda", value: "izquierda" }
+                  - { label: "Centro", value: "centro" }
+                  - { label: "Derecha", value: "derecha" }
+                  - { label: "Justificado", value: "justificado" }
+              - label: "Tamaño"
+                name: "tamano"
+                widget: "select"
+                default: "normal"
+                options:
+                  - { label: "Pequeño", value: "pequeño" }
+                  - { label: "Normal", value: "normal" }
+                  - { label: "Grande", value: "grande" }
+                  - { label: "Muy grande", value: "muy-grande" }
+              - label: "Tipografía"
+                name: "tipografia"
+                widget: "select"
+                default: "sans"
+                options:
+                  - { label: "Sans (moderna)", value: "sans" }
+                  - { label: "Serif (clásica)", value: "serif" }
+                  - { label: "Cursiva", value: "cursiva" }
+              - { label: "Negrita", name: "negrita", widget: "boolean", default: false }
+              - { label: "Color del texto", name: "color", widget: "color" }
 
   - name: "obras"
     label: "Obras"
@@ -94,5 +126,21 @@ collections:
         name: "contacto"
         fields:
           - { label: "Email", name: "email", widget: "string" }
-          - { label: "Instagram (URL)", name: "instagram", widget: "string" }
-          - { label: "Facebook (URL)", name: "facebook", widget: "string" }
+          - label: "Redes sociales"
+            name: "redes"
+            widget: "list"
+            summary: "{{fields.plataforma}}"
+            fields:
+              - label: "Plataforma"
+                name: "plataforma"
+                widget: "select"
+                options:
+                  - { label: "Instagram", value: "instagram" }
+                  - { label: "Facebook", value: "facebook" }
+                  - { label: "Twitter / X", value: "twitter" }
+                  - { label: "YouTube", value: "youtube" }
+                  - { label: "LinkedIn", value: "linkedin" }
+                  - { label: "TikTok", value: "tiktok" }
+                  - { label: "WhatsApp", value: "whatsapp" }
+                  - { label: "Otro", value: "otro" }
+              - { label: "Link", name: "url", widget: "string" }

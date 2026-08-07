@@ -5,6 +5,26 @@ import homeData from '../content/home.json'
 
 const slides = homeData.carrusel
 
+const clasesTamano: Record<string, string> = {
+  pequeño: 'text-sm',
+  normal: 'text-base',
+  grande: 'text-lg md:text-xl',
+  'muy-grande': 'text-2xl md:text-3xl',
+}
+
+const clasesAlineacion: Record<string, string> = {
+  izquierda: 'text-left',
+  centro: 'text-center',
+  derecha: 'text-right',
+  justificado: 'text-justify',
+}
+
+const clasesTipografia: Record<string, string> = {
+  sans: 'font-sans',
+  serif: 'font-serif',
+  cursiva: 'font-logo',
+}
+
 export default function Home() {
   usePageTitle('Macaví | Macarena Vicuña, Artista Visual')
   const [index, setIndex] = useState(0)
@@ -39,14 +59,26 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-16 text-center max-w-2xl mx-auto">
-        <p className="text-fog leading-relaxed">{homeData.texto}</p>
-        <Link
-          to="/obras"
-          className="inline-block mt-6 text-sm tracking-widest2 uppercase border-b border-ink pb-1 hover:opacity-70 transition-opacity"
-        >
-          Ver obras
-        </Link>
+      <div className="mt-16 max-w-2xl mx-auto space-y-4">
+        {homeData.parrafos.map((p, i) => (
+          <p
+            key={i}
+            className={`leading-relaxed ${clasesTamano[p.tamano] ?? 'text-base'} ${
+              clasesAlineacion[p.alineacion] ?? 'text-center'
+            } ${clasesTipografia[p.tipografia] ?? 'font-sans'} ${p.negrita ? 'font-bold' : ''}`}
+            style={{ color: p.color || undefined }}
+          >
+            {p.texto}
+          </p>
+        ))}
+        <div className="text-center">
+          <Link
+            to="/obras"
+            className="inline-block mt-2 text-sm tracking-widest2 uppercase border-b border-ink pb-1 hover:opacity-70 transition-opacity"
+          >
+            Ver obras
+          </Link>
+        </div>
       </div>
     </div>
   )

@@ -1,5 +1,7 @@
 {
   "email": "contacto@macaviart.cl",
-  "instagram": "https://instagram.com/macaviart",
-  "facebook": "https://facebook.com/macavicu"
+  "redes": [
+    { "plataforma": "instagram", "url": "https://instagram.com/macaviart" },
+    { "plataforma": "facebook", "url": "https://facebook.com/macavicu" }
+  ]
 }

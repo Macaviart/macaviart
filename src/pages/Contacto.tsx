@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react'
-import { Instagram, Facebook } from 'lucide-react'
 import { usePageTitle } from '../hooks/usePageTitle'
 import contactoData from '../content/contacto.json'
+import { getIconoRed } from '../lib/redSocial'
 
 // El envío aún no está conectado a ningún servicio (Formspree, etc.) — solo simula éxito.
 // Conectar a un backend real antes de publicar el sitio.
@@ -66,24 +66,21 @@ export default function Contacto() {
           {contactoData.email}
         </a>
         <div className="flex items-center gap-5">
-          <a
-            href={contactoData.instagram}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram"
-            className="hover:text-ink transition-colors"
-          >
-            <Instagram size={20} />
-          </a>
-          <a
-            href={contactoData.facebook}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Facebook"
-            className="hover:text-ink transition-colors"
-          >
-            <Facebook size={20} />
-          </a>
+          {contactoData.redes.map((red) => {
+            const Icono = getIconoRed(red.plataforma)
+            return (
+              <a
+                key={red.url}
+                href={red.url}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={red.plataforma}
+                className="hover:text-ink transition-colors"
+              >
+                <Icono size={20} />
+              </a>
+            )
+          })}
         </div>
       </div>
     </div>
