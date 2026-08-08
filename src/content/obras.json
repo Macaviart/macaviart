@@ -95,12 +95,6 @@
           "dimensiones": "200 x 110 cm"
         },
         {
-          "src": "/images/obras/instantes-permanentes/instantes-permanentes-09.jpg",
-          "titulo": "Instantes II",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "150 x 90 cm"
-        },
-        {
           "src": "/images/obras/instantes-permanentes/instantes-permanentes-10.jpg",
           "titulo": "Instantes Permanentes IX",
           "tecnica": "Técnica Mixta",
@@ -117,6 +111,12 @@
           "titulo": "Instantes Permanentes XI",
           "tecnica": "Técnica Mixta",
           "dimensiones": "110 x 140 cm"
+        },
+        {
+          "src": "/images/obras/instantes-permanentes/instantes-permanentes-09.jpg",
+          "titulo": "Instantes II",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "150 x 90 cm"
         },
         {
           "src": "/images/obras/instantes-permanentes/instantes-permanentes-13.jpg",
