@@ -253,7 +253,7 @@ export const notas: NotaPrensa[] = [
   },
   {
     publicacion: 'Prensa',
-    titulo: 'Inauguración de exposición',
+    titulo: 'Inauguración de exposición individual "Color Reflejo del Alma"',
     imagenes: [p(58)],
   },
   {
