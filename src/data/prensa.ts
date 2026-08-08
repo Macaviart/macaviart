@@ -66,13 +66,6 @@ export const notas: NotaPrensa[] = [
     url: 'http://impresa.elmercurio.com/Pages/SupplementDetail.aspx?dt=2014-10-04&SupplementID=4&BodyID=0',
   },
   {
-    publicacion: 'Arte al Límite (web)',
-    fecha: 'Diciembre 2013 (fecha inferida)',
-    titulo: 'Artistas más visitados en arteallimite.com — Diciembre',
-    extracto: 'Macarena Vicuña, entre los artistas más visitados del mes junto a María Eugenia Akel, Bernardita Broughton, Marcela Iglesias, Coco Martín y Claudia Parodi.',
-    imagenes: [p(40)],
-  },
-  {
     publicacion: 'Arte al Límite — Periódico N°99',
     fecha: 'Diciembre 2013',
     autor: 'Por Equipo Arte al Límite',
