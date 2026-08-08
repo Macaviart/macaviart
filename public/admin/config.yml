@@ -75,7 +75,12 @@ collections:
               - label: "Imágenes"
                 name: "imagenes"
                 widget: "list"
-                field: { label: "Imagen", name: "imagen", widget: "image" }
+                summary: "{{titulo}}"
+                fields:
+                  - { label: "Imagen", name: "src", widget: "image" }
+                  - { label: "Título de la obra", name: "titulo", widget: "string", required: false }
+                  - { label: "Técnica", name: "tecnica", widget: "string", required: false }
+                  - { label: "Dimensiones", name: "dimensiones", widget: "string", required: false, hint: "Ej: 200 x 110 cm" }
 
   - name: "artista"
     label: "Nota de Artista"

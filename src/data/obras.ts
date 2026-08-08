@@ -1,10 +1,13 @@
 import obrasData from '../content/obras.json'
 
-export type Serie = {
-  slug: string
+export type ImagenObra = {
+  src: string
   titulo: string
-  imagenes: string[]
+  tecnica: string | null
+  dimensiones: string | null
 }
+
+export type Serie = { slug: string; titulo: string; imagenes: ImagenObra[] }
 
 export const series: Serie[] = obrasData.series
 

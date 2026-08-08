@@ -15,7 +15,7 @@ export default function ObrasLanding() {
             <Link key={s.slug} to={`/obras/${s.slug}`} className="group">
               {portada ? (
                 <img
-                  src={portada}
+                  src={portada.src}
                   alt={s.titulo}
                   className="aspect-[4/3] w-full object-cover border border-hairline"
                   loading="lazy"

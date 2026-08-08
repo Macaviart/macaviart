@@ -20,14 +20,25 @@ export default function SerieGaleria() {
       </h1>
       {imagenes.length > 0 ? (
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-8">
-          {imagenes.map((src, i) => (
-            <img
-              key={src}
-              src={src}
-              alt={`${serie.titulo} ${i + 1}`}
-              className="w-full h-auto border border-hairline mb-8 break-inside-avoid"
-              loading="lazy"
-            />
+          {imagenes.map((img, i) => (
+            <div key={img.src} className="mb-8 break-inside-avoid">
+              <img
+                src={img.src}
+                alt={img.titulo || `${serie.titulo} ${i + 1}`}
+                className="w-full h-auto border border-hairline"
+                loading="lazy"
+              />
+              {(img.titulo || img.tecnica || img.dimensiones) && (
+                <div className="mt-2 text-center">
+                  {img.titulo && <p className="text-sm text-ink">{img.titulo}</p>}
+                  {(img.tecnica || img.dimensiones) && (
+                    <p className="text-xs text-fog">
+                      {[img.tecnica, img.dimensiones].filter(Boolean).join(' ')}
+                    </p>
+                  )}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       ) : (
