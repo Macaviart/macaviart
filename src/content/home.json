@@ -8,8 +8,8 @@
   ],
   "parrafos": [
     {
-      "texto": "Macarena Vicuña (Macaví) es una artista visual chilena, con una trayectoria de más de 35 años dedicada a la pintura y exhibiciones en varias países del mundo y más de 20 años impartiendo clases en su Taller Macaví.",
-      "alineacion": "centro",
+      "texto": "Macarena Vicuña (Macaví) es una artista visual chilena, con una trayectoria de más de 35 años dedicada a la pintura y exhibiciones en varios países del mundo y más de 20 años impartiendo clases en su Taller Macaví.",
+      "alineacion": "justificado",
       "negrita": false,
       "tamano": "normal",
       "color": "#78766f",
@@ -17,7 +17,7 @@
     },
     {
       "texto": "Su lenguaje pictórico surge del encuentro entre el dibujo realista y la abstracción, explorando un territorio donde la figura y el fondo se entrelazan hasta desdibujar sus límites. Cada obra nace de un proceso de construcción en el que la pintura se convierte en memoria, tiempo y huella.",
-      "alineacion": "centro",
+      "alineacion": "justificado",
       "negrita": false,
       "tamano": "normal",
       "color": "#78766f",
@@ -25,7 +25,7 @@
     },
     {
       "texto": "La materialidad ocupa un lugar esencial en su trabajo. A través de una técnica mixta que combina acrílicos, sucesivas veladuras y texturas, construye superficies de gran profundidad y riqueza visual, donde la luz revela y oculta, invitando al espectador a descubrir nuevas capas de significado.",
-      "alineacion": "centro",
+      "alineacion": "justificado",
       "negrita": false,
       "tamano": "normal",
       "color": "#78766f",
@@ -33,7 +33,7 @@
     },
     {
       "texto": "El carboncillo aporta un dibujo gestual, libre y expresivo que dialoga con la pintura, creando un equilibrio entre la precisión del trazo y la espontaneidad del gesto. El resultado es una obra de fuerte identidad, en la que materia, dibujo y color convergen para dar vida a imágenes que invitan a la contemplación y a la reflexión.",
-      "alineacion": "centro",
+      "alineacion": "justificado",
       "negrita": false,
       "tamano": "normal",
       "color": "#78766f",
