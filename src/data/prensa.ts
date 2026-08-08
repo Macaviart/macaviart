@@ -242,11 +242,6 @@ export const notas: NotaPrensa[] = [
     imagenes: [p(35), p(36)],
   },
   {
-    publicacion: 'Arte al Límite (web)',
-    titulo: 'Ficha de artista y galería',
-    imagenes: [p(39)],
-  },
-  {
     publicacion: 'Prensa',
     titulo: 'Inauguración de exposición',
     imagenes: [p(46)],
