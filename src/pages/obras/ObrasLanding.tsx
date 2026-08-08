@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import PlaceholderImage from '../../components/PlaceholderImage'
-import { series, getImagenesSerie } from '../../data/obras'
+import { series, getPortadaSerie } from '../../data/obras'
 import { usePageTitle } from '../../hooks/usePageTitle'
 
 export default function ObrasLanding() {
@@ -10,12 +10,12 @@ export default function ObrasLanding() {
       <h1 className="text-center text-sm tracking-widest2 uppercase text-fog mb-12">Obras</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {series.map((s) => {
-          const portada = getImagenesSerie(s)[0]
+          const portada = getPortadaSerie(s)
           return (
             <Link key={s.slug} to={`/obras/${s.slug}`} className="group">
               {portada ? (
                 <img
-                  src={portada.src}
+                  src={portada}
                   alt={s.titulo}
                   className="aspect-[4/3] w-full object-cover border border-hairline"
                   loading="lazy"

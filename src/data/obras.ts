@@ -7,10 +7,12 @@ export type ImagenObra = {
   dimensiones: string | null
 }
 
-export type Serie = { slug: string; titulo: string; imagenes: ImagenObra[] }
+export type Serie = { slug: string; titulo: string; portada?: string; imagenes: ImagenObra[] }
 
-export const series: Serie[] = obrasData.series
+export const series: Serie[] = obrasData.series as Serie[]
 
 export const getSerieBySlug = (slug: string) => series.find((s) => s.slug === slug)
 
 export const getImagenesSerie = (serie: Serie) => serie.imagenes
+
+export const getPortadaSerie = (serie: Serie) => serie.portada ?? serie.imagenes[0]?.src
