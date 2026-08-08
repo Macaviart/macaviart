@@ -1,11 +1,14 @@
+import { useState } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
 import PlaceholderImage from '../../components/PlaceholderImage'
+import Lightbox from '../../components/Lightbox'
 import { getSerieBySlug, getImagenesSerie } from '../../data/obras'
 import { usePageTitle } from '../../hooks/usePageTitle'
 
 export default function SerieGaleria() {
   const { slug } = useParams<{ slug: string }>()
   const serie = slug ? getSerieBySlug(slug) : undefined
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
   usePageTitle(serie ? `${serie.titulo} — Obras | Macaví` : 'Obras | Macaví')
 
@@ -22,12 +25,19 @@ export default function SerieGaleria() {
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-8">
           {imagenes.map((img, i) => (
             <div key={img.src} className="mb-8 break-inside-avoid">
-              <img
-                src={img.src}
-                alt={img.titulo || `${serie.titulo} ${i + 1}`}
-                className="w-full h-auto border border-hairline"
-                loading="lazy"
-              />
+              <button
+                type="button"
+                onClick={() => setLightboxIndex(i)}
+                className="block w-full cursor-zoom-in"
+                aria-label={`Ampliar ${img.titulo || serie.titulo}`}
+              >
+                <img
+                  src={img.src}
+                  alt={img.titulo || `${serie.titulo} ${i + 1}`}
+                  className="w-full h-auto border border-hairline"
+                  loading="lazy"
+                />
+              </button>
               {(img.titulo || img.tecnica || img.dimensiones) && (
                 <div className="mt-2 text-center">
                   {img.titulo && <p className="text-sm text-ink">{img.titulo}</p>}
@@ -47,6 +57,15 @@ export default function SerieGaleria() {
             <PlaceholderImage key={i} label={`${serie.titulo} ${i + 1}`} aspect="aspect-[4/3]" />
           ))}
         </div>
+      )}
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          imagenes={imagenes}
+          index={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onIndexChange={setLightboxIndex}
+        />
       )}
     </div>
   )
