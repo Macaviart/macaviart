@@ -10,7 +10,7 @@ export type NotaPrensa = {
 
 const p = (n: number) => `/images/prensa/clip-${String(n).padStart(2, '0')}${extMap[n]}`
 
-// Extensiones reales de cada archivo descargado (clip-01..clip-57)
+// Extensiones reales de cada archivo descargado (clip-01..clip-58)
 const extMap: Record<number, string> = {
   1: '.png', 2: '.jpg', 3: '.jpg', 4: '.png', 5: '.jpg', 6: '.jpg', 7: '.png', 8: '.jpeg',
   9: '.jpg', 10: '.png', 11: '.png', 12: '.png', 13: '.png', 14: '.png', 15: '.png', 16: '.png',
@@ -19,7 +19,7 @@ const extMap: Record<number, string> = {
   33: '.jpg', 34: '.jpg', 35: '.png', 36: '.png', 37: '.jpg', 38: '.png', 39: '.png', 40: '.jpg',
   41: '.jpg', 42: '.png', 43: '.png', 44: '.png', 45: '.png', 46: '.jpg', 47: '.png', 48: '.jpg',
   49: '.png', 50: '.png', 51: '.jpg', 52: '.png', 53: '.png', 54: '.png', 55: '.jpg', 56: '.png',
-  57: '.png',
+  57: '.png', 58: '.jpg',
 }
 
 // Ordenadas cronológicamente de más reciente a más antigua.
@@ -254,7 +254,7 @@ export const notas: NotaPrensa[] = [
   {
     publicacion: 'Prensa',
     titulo: 'Inauguración de exposición',
-    imagenes: [p(48)],
+    imagenes: [p(58)],
   },
   {
     publicacion: 'Revista Vivienda y Decoración, El Mercurio',
