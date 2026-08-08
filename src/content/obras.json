@@ -412,6 +412,7 @@
     {
       "slug": "grabados",
       "titulo": "Grabados",
+      "portada": "/images/obras/grabados/grabados-01-portada.jpg",
       "imagenes": [
         {
           "src": "/images/obras/grabados/grabados-01.jpg",
