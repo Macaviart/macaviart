@@ -197,60 +197,6 @@
       "titulo": "Figura Humana",
       "imagenes": [
         {
-          "src": "/images/obras/figura-humana/figura-humana-01.jpg",
-          "titulo": "Complicidad VI",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "200 x 110 cm"
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-02.jpg",
-          "titulo": "Coloquio III",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "200 x 110 cm"
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-03.jpg",
-          "titulo": "Seducción IV",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "200 x 120 cm"
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-04.jpg",
-          "titulo": "Complicidad II",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "200 x 110 cm"
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-05.jpg",
-          "titulo": "Coloquio I",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "200 x 110 cm"
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-06.jpg",
-          "titulo": "Complicidad IV",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "200 x 110 cm"
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-07.jpg",
-          "titulo": "Coloquio III",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "140 x 100 cm"
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-08.jpg",
-          "titulo": "Coloquio IV",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "140 x 100 cm"
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-09.jpg",
-          "titulo": "Seducción I",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "200 x 110 cm"
-        },
-        {
           "src": "/images/obras/figura-humana/figura-humana-10.jpg",
           "titulo": "Complicidad III",
           "tecnica": "Técnica Mixta",
@@ -263,10 +209,64 @@
           "dimensiones": "200 x 120 cm"
         },
         {
+          "src": "/images/obras/figura-humana/figura-humana-03.jpg",
+          "titulo": "Seducción IV",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "200 x 120 cm"
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-05.jpg",
+          "titulo": "Coloquio I",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "200 x 110 cm"
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-02.jpg",
+          "titulo": "Coloquio III",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "200 x 110 cm"
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-04.jpg",
+          "titulo": "Complicidad II",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "200 x 110 cm"
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-06.jpg",
+          "titulo": "Complicidad IV",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "200 x 110 cm"
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-01.jpg",
+          "titulo": "Complicidad VI",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "200 x 110 cm"
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-09.jpg",
+          "titulo": "Seducción I",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "200 x 110 cm"
+        },
+        {
           "src": "/images/obras/figura-humana/figura-humana-12.jpg",
           "titulo": "Seducción III",
           "tecnica": "Técnica Mixta",
           "dimensiones": "200 x 80 cm"
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-07.jpg",
+          "titulo": "Coloquio III",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "140 x 100 cm"
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-08.jpg",
+          "titulo": "Coloquio IV",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "140 x 100 cm"
         }
       ]
     },
