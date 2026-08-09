@@ -30,13 +30,13 @@ export default function SerieGaleria() {
               <button
                 type="button"
                 onClick={() => setLightboxIndex(i)}
-                className="block w-full cursor-zoom-in"
+                className="block w-full cursor-zoom-in text-center"
                 aria-label={`Ampliar ${img.titulo || serie.titulo}`}
               >
                 <img
                   src={img.src}
                   alt={img.titulo || `${serie.titulo} ${i + 1}`}
-                  className="w-full h-auto border border-hairline"
+                  className="max-w-full max-h-[520px] w-auto h-auto mx-auto border border-hairline"
                   loading="lazy"
                 />
               </button>
