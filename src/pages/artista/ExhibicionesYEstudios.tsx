@@ -1,4 +1,5 @@
 import { categorias, type CvItem } from '../../data/exhibiciones'
+import BackButton from '../../components/BackButton'
 import { usePageTitle } from '../../hooks/usePageTitle'
 
 function Entry({ item, showYear }: { item: CvItem; showYear: boolean }) {
@@ -19,6 +20,7 @@ export default function ExhibicionesYEstudios() {
   usePageTitle('Exhibiciones y Estudios | Macaví')
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-10 py-16">
+      <BackButton to="/artista" label="Volver a Artista" />
       <div className="text-center mb-16">
         <h1 className="text-sm tracking-widest2 uppercase text-fog">Macaví</h1>
         <p className="text-sm text-stone-500 mt-2">Macarena Vicuña. Santiago, Chile</p>

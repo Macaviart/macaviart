@@ -1,4 +1,5 @@
 import PlaceholderImage from '../components/PlaceholderImage'
+import BackButton from '../components/BackButton'
 import { usePageTitle } from '../hooks/usePageTitle'
 import clasesData from '../content/clases.json'
 
@@ -8,6 +9,7 @@ export default function Clases() {
 
   return (
     <div className="max-w-5xl mx-auto px-6 md:px-10 py-16">
+      <BackButton to="/" label="Volver al Inicio" />
       <h1 className="text-center text-sm tracking-widest2 uppercase text-fog mb-12">Clases</h1>
 
       <div className="max-w-2xl mx-auto text-center text-fog leading-relaxed mb-12">

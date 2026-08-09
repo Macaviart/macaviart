@@ -2,6 +2,7 @@ import { FormEvent, useState } from 'react'
 import { usePageTitle } from '../hooks/usePageTitle'
 import contactoData from '../content/contacto.json'
 import { getIconoRed } from '../lib/redSocial'
+import BackButton from '../components/BackButton'
 
 // El envío aún no está conectado a ningún servicio (Formspree, etc.) — solo simula éxito.
 // Conectar a un backend real antes de publicar el sitio.
@@ -16,6 +17,7 @@ export default function Contacto() {
 
   return (
     <div className="max-w-xl mx-auto px-6 md:px-10 py-16">
+      <BackButton to="/" label="Volver al Inicio" />
       <h1 className="text-center text-sm tracking-widest2 uppercase text-fog mb-12">Contacto</h1>
 
       {enviado ? (

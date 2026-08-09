@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PlaceholderImage from '../../components/PlaceholderImage'
+import BackButton from '../../components/BackButton'
 import { series, getPortadaSerie } from '../../data/obras'
 import { usePageTitle } from '../../hooks/usePageTitle'
 
@@ -7,6 +8,7 @@ export default function ObrasLanding() {
   usePageTitle('Obras | Macaví')
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-10 py-16">
+      <BackButton to="/" label="Volver al Inicio" />
       <h1 className="text-center text-sm tracking-widest2 uppercase text-fog mb-12">Obras</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {series.map((s) => {

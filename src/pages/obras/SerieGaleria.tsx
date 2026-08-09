@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
 import PlaceholderImage from '../../components/PlaceholderImage'
 import Lightbox from '../../components/Lightbox'
+import BackButton from '../../components/BackButton'
 import { getSerieBySlug, getImagenesSerie } from '../../data/obras'
 import { usePageTitle } from '../../hooks/usePageTitle'
 
@@ -18,6 +19,7 @@ export default function SerieGaleria() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-10 py-16">
+      <BackButton to="/obras" label="Volver a Obras" />
       <h1 className="text-center text-sm tracking-widest2 uppercase text-fog mb-12">
         {serie.titulo}
       </h1>
