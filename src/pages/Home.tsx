@@ -71,12 +71,30 @@ export default function Home() {
             {p.texto}
           </p>
         ))}
-        <div className="text-center">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-2">
           <Link
             to="/obras"
-            className="inline-block mt-2 text-sm tracking-widest2 uppercase border-b border-ink pb-1 hover:opacity-70 transition-opacity"
+            className="inline-block text-sm tracking-widest2 uppercase border-b border-ink pb-1 hover:opacity-70 transition-opacity"
           >
             Ver obras
+          </Link>
+          <Link
+            to="/artista"
+            className="inline-block text-sm tracking-widest2 uppercase border-b border-ink pb-1 hover:opacity-70 transition-opacity"
+          >
+            Artista
+          </Link>
+          <Link
+            to="/clases"
+            className="inline-block text-sm tracking-widest2 uppercase border-b border-ink pb-1 hover:opacity-70 transition-opacity"
+          >
+            Clases
+          </Link>
+          <Link
+            to="/contacto"
+            className="inline-block text-sm tracking-widest2 uppercase border-b border-ink pb-1 hover:opacity-70 transition-opacity"
+          >
+            Contacto
           </Link>
         </div>
       </div>
