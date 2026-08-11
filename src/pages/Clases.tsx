@@ -12,9 +12,24 @@ export default function Clases() {
       <BackButton to="/" label="Volver al Inicio" />
       <h1 className="text-center text-sm tracking-widest2 uppercase text-fog mb-12">Clases</h1>
 
-      <div className="max-w-2xl mx-auto text-center text-fog leading-relaxed mb-12">
-        <p>{clasesData.texto}</p>
+      <div className="max-w-2xl mx-auto text-fog leading-relaxed mb-12 space-y-4">
+        {clasesData.parrafos.map((p, i) => (
+          <p key={i} className={p.negrita ? 'font-semibold text-ink' : ''}>
+            {p.texto}
+          </p>
+        ))}
       </div>
+
+      {clasesData.horarios.length > 0 && (
+        <div className="max-w-2xl mx-auto mb-12">
+          <h2 className="text-sm tracking-widest2 uppercase text-fog mb-4">Horarios</h2>
+          <ul className="space-y-2 text-fog leading-relaxed">
+            {clasesData.horarios.map((h, i) => (
+              <li key={i}>{h}</li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {imagenes.length > 0

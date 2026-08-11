@@ -1,4 +1,22 @@
 {
-  "texto": "[Placeholder] Macarena dicta clases de pintura para distintos niveles. Aquí va la descripción real de modalidad, horarios y precios una vez definidos.",
+  "parrafos": [
+    {
+      "texto": "\"Cada obra comienza con una mirada\"",
+      "negrita": true
+    },
+    {
+      "texto": "En el Taller Macaví encontrarás un espacio para crear la tuya, a través de una enseñanza personalizada que integra técnicas mixtas, observación y expresión artística.”",
+      "negrita": false
+    },
+    {
+      "texto": "Un lugar para aprender, crear e inspirarte, abierto a alumnos de todos los niveles, ubicado en Las Condes, en un entorno rodeado de naturaleza y con estacionamiento para tu comodidad.",
+      "negrita": false
+    }
+  ],
+  "horarios": [
+    "Lunes de 11 a 14 hrs",
+    "Martes y Jueves de 11 a 15:30 hrs",
+    "Miércoles de 11 a 14 hrs y de 18 a 21 hrs"
+  ],
   "imagenes": []
 }
