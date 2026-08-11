@@ -18,5 +18,14 @@
     "Martes y Jueves de 11 a 15:30 hrs",
     "Miércoles de 11 a 14 hrs y de 18 a 21 hrs"
   ],
-  "imagenes": []
+  "imagenes": [
+    "/images/clases/clases-01.jpg",
+    "/images/clases/clases-02.jpg",
+    "/images/clases/clases-03.jpg",
+    "/images/clases/clases-04.jpg",
+    "/images/clases/clases-05.jpg",
+    "/images/clases/clases-06.jpg",
+    "/images/clases/clases-07.jpg",
+    "/images/clases/clases-08.jpg"
+  ]
 }
