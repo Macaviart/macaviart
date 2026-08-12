@@ -71,7 +71,7 @@ export default function Home() {
             {p.texto}
           </p>
         ))}
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-2">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-10">
           <Link
             to="/obras"
             className="inline-block text-sm tracking-widest2 uppercase border-b border-ink pb-1 hover:opacity-70 transition-opacity"
