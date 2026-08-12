@@ -33,14 +33,18 @@ export default function Clases() {
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {imagenes.length > 0
-          ? imagenes.map((src, i) => (
-              <img
-                key={src}
-                src={src}
-                alt={`Clases ${i + 1}`}
-                className="aspect-square w-full object-cover border border-hairline"
-                loading="lazy"
-              />
+          ? imagenes.map((img, i) => (
+              <div key={img.src}>
+                <p className="text-center text-xs tracking-widest2 uppercase text-fog mb-2">
+                  {img.nombre}
+                </p>
+                <img
+                  src={img.src}
+                  alt={img.nombre || `Clases ${i + 1}`}
+                  className="aspect-square w-full object-cover border border-hairline"
+                  loading="lazy"
+                />
+              </div>
             ))
           : Array.from({ length: 6 }).map((_, i) => (
               <PlaceholderImage key={i} label={`Clases ${i + 1}`} aspect="aspect-square" />
