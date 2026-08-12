@@ -4,15 +4,31 @@ import contactoData from '../content/contacto.json'
 import { getIconoRed } from '../lib/redSocial'
 import BackButton from '../components/BackButton'
 
-// El envío aún no está conectado a ningún servicio (Formspree, etc.) — solo simula éxito.
-// Conectar a un backend real antes de publicar el sitio.
 export default function Contacto() {
   usePageTitle('Contacto | Macaví')
-  const [enviado, setEnviado] = useState(false)
+  const [estado, setEstado] = useState<'idle' | 'enviando' | 'enviado' | 'error'>('idle')
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setEnviado(true)
+    setEstado('enviando')
+    const form = e.currentTarget
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${contactoData.email}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          Nombre: (form.elements.namedItem('name') as HTMLInputElement).value,
+          Email: (form.elements.namedItem('email') as HTMLInputElement).value,
+          Mensaje: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+          _subject: 'Nuevo mensaje desde macaviart.cl',
+        }),
+      })
+      if (!res.ok) throw new Error('request failed')
+      setEstado('enviado')
+      form.reset()
+    } catch {
+      setEstado('error')
+    }
   }
 
   return (
@@ -20,7 +36,7 @@ export default function Contacto() {
       <BackButton to="/" label="Volver al Inicio" />
       <h1 className="text-center text-sm tracking-widest2 uppercase text-fog mb-12">Contacto</h1>
 
-      {enviado ? (
+      {estado === 'enviado' ? (
         <p className="text-center text-ink">¡Tus datos se enviaron con éxito!</p>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -30,6 +46,7 @@ export default function Contacto() {
             </label>
             <input
               type="text"
+              name="name"
               required
               className="w-full border border-hairline px-3 py-2 text-sm focus:outline-none focus:border-ink"
             />
@@ -40,6 +57,7 @@ export default function Contacto() {
             </label>
             <input
               type="email"
+              name="email"
               required
               className="w-full border border-hairline px-3 py-2 text-sm focus:outline-none focus:border-ink"
             />
@@ -49,6 +67,7 @@ export default function Contacto() {
               Mensaje
             </label>
             <textarea
+              name="message"
               required
               rows={5}
               className="w-full border border-hairline px-3 py-2 text-sm focus:outline-none focus:border-ink"
@@ -56,10 +75,16 @@ export default function Contacto() {
           </div>
           <button
             type="submit"
-            className="w-full bg-ink text-white text-sm tracking-widest2 uppercase py-3 hover:opacity-90 transition-opacity"
+            disabled={estado === 'enviando'}
+            className="w-full bg-ink text-white text-sm tracking-widest2 uppercase py-3 hover:opacity-90 transition-opacity disabled:opacity-50"
           >
-            Enviar
+            {estado === 'enviando' ? 'Enviando...' : 'Enviar'}
           </button>
+          {estado === 'error' && (
+            <p className="text-center text-sm text-red-600">
+              Hubo un error al enviar. Intenta de nuevo o escribe directo a {contactoData.email}.
+            </p>
+          )}
         </form>
       )}
 
