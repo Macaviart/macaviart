@@ -22,9 +22,9 @@
     { "src": "/images/clases/clases-01.jpg", "nombre": "Pintura" },
     { "src": "/images/clases/clases-03.jpg", "nombre": "Veladura" },
     { "src": "/images/clases/clases-04.jpg", "nombre": "Técnica Mixta" },
-    { "src": "/images/clases/clases-05.jpg", "nombre": "Acuarela" },
     { "src": "/images/clases/clases-07.jpg", "nombre": "Texturas" },
     { "src": "/images/clases/clases-08.jpg", "nombre": "Dibujo" },
+    { "src": "/images/clases/clases-05.jpg", "nombre": "Acuarela" },
     { "src": "/images/clases/clases-09.jpg", "nombre": "Entorno" }
   ]
 }
