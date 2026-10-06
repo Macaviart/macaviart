@@ -29,6 +29,16 @@ const extMap: Record<number, string> = {
 // de fecha quedaron agrupadas al final, en su orden original.
 export const notas: NotaPrensa[] = [
   {
+    publicacion: 'Revista VD, El Mercurio',
+    fecha: 'Edición N°952 — Sábado 4 de octubre de 2014',
+    autor: 'Texto: Soledad Salgado F. — Fotografías: Carla Pinilla L.',
+    titulo: 'Pasión por el Dibujo',
+    extracto:
+      'Las obras de Macarena Vicuña (Macaví) tienen a la figura humana como elemento central. A través de trazos que la insinúan da cuenta de la soltura y gestualidad que ha adquirido con el tiempo, además realiza grabados e intervenciones de muebles.',
+    imagenes: [p(2), p(3)],
+    url: 'http://impresa.elmercurio.com/Pages/SupplementDetail.aspx?dt=2014-10-04&SupplementID=4&BodyID=0',
+  },
+  {
     publicacion: 'Arte al Límite (web)',
     fecha: 'Abril 2016',
     titulo: 'Macarena Vicuña: la materialización de una femineidad con guiños de color',
@@ -54,16 +64,6 @@ export const notas: NotaPrensa[] = [
     extracto:
       '"Con una trayectoria de más de dos décadas, esta artista le brinda a la obra una madurez especial, un desarrollo completo y un manejo absoluto de su técnica." Sobre Instantes Permanentes II (2014): "La pintura, velada y densa, se entrelaza para formar atmósferas que develan la sumatoria de instantes ocurridos en el proceso de la obra."',
     imagenes: [p(8), p(7)],
-  },
-  {
-    publicacion: 'Revista VD, El Mercurio',
-    fecha: 'Edición N°952 — Sábado 4 de octubre de 2014',
-    autor: 'Texto: Soledad Salgado F. — Fotografías: Carla Pinilla L.',
-    titulo: 'Pasión por el Dibujo',
-    extracto:
-      'Las obras de Macarena Vicuña (Macaví) tienen a la figura humana como elemento central. A través de trazos que la insinúan da cuenta de la soltura y gestualidad que ha adquirido con el tiempo, además realiza grabados e intervenciones de muebles.',
-    imagenes: [p(2), p(3)],
-    url: 'http://impresa.elmercurio.com/Pages/SupplementDetail.aspx?dt=2014-10-04&SupplementID=4&BodyID=0',
   },
   {
     publicacion: 'Arte al Límite — Periódico N°99',
