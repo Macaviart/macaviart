@@ -12,6 +12,7 @@ export const categorias: Categoria[] = [
     tituloEs: 'Exposiciones Individuales',
     tituloEn: 'Solo Exhibitions',
     es: [
+      { year: '2026', title: 'De la Materia al Gesto', detail: 'Galería La Sala, Santiago, Chile.' },
       { year: '2019', title: 'Esencia', detail: 'Galería Artifact, New York, USA.' },
       { year: '2014', title: 'Instantes Permanentes', detail: 'Casas de lo Matta, Santiago, Chile.' },
       { year: '2011', title: 'De Norte a Sur', detail: 'Galería Blanc by Praxis, Santiago, Chile.' },
@@ -19,6 +20,7 @@ export const categorias: Categoria[] = [
       { year: '2004', title: 'El Color, Reflejo del Alma', detail: 'Instituto Chileno Israelí de Cultura, Santiago, Chile.' },
     ],
     en: [
+      { year: '2026', title: 'From Matter to Gesture', detail: 'La Sala Gallery, Santiago, Chile.' },
       { year: '2019', title: 'Essence', detail: 'Artifact Gallery, New York, USA.' },
       { year: '2014', title: 'Permanentes Instant', detail: 'Casas de lo Matta, Santiago, Chile.' },
       { year: '2011', title: 'North to South', detail: 'Blanc by Praxis Gallery, Santiago, Chile.' },
