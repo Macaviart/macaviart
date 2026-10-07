@@ -113,48 +113,56 @@
       "titulo": "Caballos",
       "imagenes": [
         {
+          "src": "/images/obras/caballos/caballos-05.jpg",
+          "titulo": "Libertad V",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "140 x 240 cm",
+          "fila": 1
+        },
+        {
           "src": "/images/obras/caballos/caballos-01.jpg",
           "titulo": "Libertad I",
           "tecnica": "Técnica Mixta",
-          "dimensiones": "110 x 200 cm"
+          "dimensiones": "110 x 200 cm",
+          "fila": 2
         },
         {
           "src": "/images/obras/caballos/caballos-02.jpg",
           "titulo": "Libertad II",
           "tecnica": "Técnica Mixta",
-          "dimensiones": "110 x 200 cm"
-        },
-        {
-          "src": "/images/obras/caballos/caballos-03.jpg",
-          "titulo": "Libertad III",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "120 x 200 cm"
+          "dimensiones": "110 x 200 cm",
+          "fila": 2
         },
         {
           "src": "/images/obras/caballos/caballos-04.jpg",
           "titulo": "Libertad IV",
           "tecnica": "Técnica Mixta",
-          "dimensiones": "160 x 70 cm"
+          "dimensiones": "160 x 70 cm",
+          "fila": 3
         },
         {
-          "src": "/images/obras/caballos/caballos-05.jpg",
-          "titulo": "Libertad V",
+          "src": "/images/obras/caballos/caballos-03.jpg",
+          "titulo": "Libertad III",
           "tecnica": "Técnica Mixta",
-          "dimensiones": "140 x 240 cm"
+          "dimensiones": "120 x 200 cm",
+          "fila": 3
         },
         {
           "src": "/images/obras/caballos/caballos-06.jpg",
           "titulo": "Libertad VI",
           "tecnica": "Técnica Mixta",
-          "dimensiones": "160 x 110 cm"
+          "dimensiones": "160 x 110 cm",
+          "fila": 4
         },
         {
           "src": "/images/obras/caballos/caballos-07.jpg",
           "titulo": "Libertad VII",
           "tecnica": "Técnica Mixta",
-          "dimensiones": "160 x 110 cm"
+          "dimensiones": "160 x 110 cm",
+          "fila": 4
         }
-      ]
+      ],
+      "portada": "/images/obras/caballos/caballos-01.jpg"
     },
     {
       "slug": "instantes-permanentes",

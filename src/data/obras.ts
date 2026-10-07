@@ -5,6 +5,7 @@ export type ImagenObra = {
   titulo: string
   tecnica: string | null
   dimensiones: string | null
+  fila?: number
 }
 
 export type Serie = { slug: string; titulo: string; portada?: string; imagenes: ImagenObra[] }
