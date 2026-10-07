@@ -75,18 +75,11 @@
           "fila": 5
         },
         {
-          "src": "/images/obras/figura-humana/figura-humana-11.jpg",
-          "titulo": "Seducción II",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "120 x 200 cm",
-          "fila": 5
-        },
-        {
           "src": "/images/obras/figura-humana/figura-humana-10.jpg",
           "titulo": "Complicidad III",
           "tecnica": "Técnica Mixta",
           "dimensiones": "120 x 240 cm",
-          "fila": 6
+          "fila": 5
         },
         {
           "src": "/images/obras/figura-humana/figura-humana-01.jpg",
@@ -100,7 +93,7 @@
           "titulo": "Seducción III",
           "tecnica": "Técnica Mixta",
           "dimensiones": "80 x 200 cm",
-          "fila": 7
+          "fila": 6
         }
       ],
       "portada": "/images/obras/figura-humana/figura-humana-10.jpg"
