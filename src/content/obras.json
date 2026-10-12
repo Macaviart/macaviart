@@ -485,24 +485,6 @@
       "portada": "/images/obras/grabados/grabados-01-portada.jpg",
       "imagenes": [
         {
-          "src": "/images/obras/grabados/grabados-04.jpg",
-          "titulo": "Mujer en Blancos I",
-          "tecnica": "Impresión Digital Intervenida",
-          "dimensiones": "50 x 70 cm"
-        },
-        {
-          "src": "/images/obras/grabados/grabados-06.jpg",
-          "titulo": "Manos Grises",
-          "tecnica": "Impresión Digital Intervenida",
-          "dimensiones": "50 x 70 cm"
-        },
-        {
-          "src": "/images/obras/grabados/grabados-05.jpg",
-          "titulo": "Mujer en Blancos II",
-          "tecnica": "Impresión Digital Intervenida",
-          "dimensiones": "50 x 70 cm"
-        },
-        {
           "src": "/images/obras/grabados/grabados-01.jpg",
           "titulo": "Mujer I",
           "tecnica": "Grabado",
@@ -519,12 +501,6 @@
           "titulo": "Mujer III",
           "tecnica": "Grabado",
           "dimensiones": "39 x 28 cm"
-        },
-        {
-          "src": "/images/obras/grabados/grabados-07.jpg",
-          "titulo": "Manos en Turquesa I",
-          "tecnica": "Impresión Digital Intervenida",
-          "dimensiones": null
         }
       ]
     },
