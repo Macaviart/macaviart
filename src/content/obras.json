@@ -12,73 +12,45 @@
           "fila": 1
         },
         {
-          "src": "/images/obras/figura-humana/figura-humana-04.jpg",
-          "titulo": "Complicidad II",
+          "src": "/images/obras/figura-humana/figura-humana-10.jpg",
+          "titulo": "Complicidad III",
           "tecnica": "Técnica Mixta",
-          "dimensiones": "110 x 200 cm",
+          "dimensiones": "120 x 240 cm",
           "fila": 2
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-06.jpg",
-          "titulo": "Complicidad IV",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "110 x 200 cm",
-          "fila": 2
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-05.jpg",
-          "titulo": "Coloquio I",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "110 x 200 cm",
-          "fila": 3
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-02.jpg",
-          "titulo": "Coloquio II",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "110 x 200 cm",
-          "fila": 3
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-07.jpg",
-          "titulo": "Coloquio III",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "100 x 140 cm",
-          "fila": 4
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-08.jpg",
-          "titulo": "Coloquio IV",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "100 x 140 cm",
-          "fila": 4
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-14.jpg",
-          "titulo": "Coloquio V",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "80 x 80 cm",
-          "fila": 4
-        },
-        {
-          "src": "/images/obras/figura-humana/figura-humana-15.jpg",
-          "titulo": "Coloquio VI",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "80 x 80 cm",
-          "fila": 4
         },
         {
           "src": "/images/obras/figura-humana/figura-humana-03.jpg",
           "titulo": "Seducción I",
           "tecnica": "Técnica Mixta",
           "dimensiones": "120 x 200 cm",
+          "fila": 3
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-04.jpg",
+          "titulo": "Complicidad II",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "110 x 200 cm",
+          "fila": 4
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-06.jpg",
+          "titulo": "Complicidad IV",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "110 x 200 cm",
+          "fila": 4
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-05.jpg",
+          "titulo": "Coloquio I",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "110 x 200 cm",
           "fila": 5
         },
         {
-          "src": "/images/obras/figura-humana/figura-humana-10.jpg",
-          "titulo": "Complicidad III",
+          "src": "/images/obras/figura-humana/figura-humana-02.jpg",
+          "titulo": "Coloquio II",
           "tecnica": "Técnica Mixta",
-          "dimensiones": "120 x 240 cm",
+          "dimensiones": "110 x 200 cm",
           "fila": 5
         },
         {
@@ -94,6 +66,34 @@
           "tecnica": "Técnica Mixta",
           "dimensiones": "80 x 200 cm",
           "fila": 6
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-07.jpg",
+          "titulo": "Coloquio III",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "100 x 140 cm",
+          "fila": 7
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-08.jpg",
+          "titulo": "Coloquio IV",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "100 x 140 cm",
+          "fila": 7
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-14.jpg",
+          "titulo": "Coloquio V",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "80 x 80 cm",
+          "fila": 8
+        },
+        {
+          "src": "/images/obras/figura-humana/figura-humana-15.jpg",
+          "titulo": "Coloquio VI",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "80 x 80 cm",
+          "fila": 8
         }
       ],
       "portada": "/images/obras/figura-humana/figura-humana-10.jpg"
@@ -102,6 +102,12 @@
       "slug": "botes",
       "titulo": "Botes",
       "imagenes": [
+        {
+          "src": "/images/obras/botes/botes-04.jpg",
+          "titulo": "Pasiones de Mar IV",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "140 x 240 cm"
+        },
         {
           "src": "/images/obras/botes/botes-01.jpg",
           "titulo": "Pasiones de Mar I",
@@ -119,12 +125,6 @@
           "titulo": "Pasiones de Mar III",
           "tecnica": "Técnica Mixta",
           "dimensiones": "110 x 200 cm"
-        },
-        {
-          "src": "/images/obras/botes/botes-04.jpg",
-          "titulo": "Pasiones de Mar IV",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "140 x 240 cm"
         },
         {
           "src": "/images/obras/botes/botes-05.jpg",
@@ -146,6 +146,13 @@
           "fila": 1
         },
         {
+          "src": "/images/obras/caballos/caballos-03.jpg",
+          "titulo": "Libertad III",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "120 x 200 cm",
+          "fila": 1
+        },
+        {
           "src": "/images/obras/caballos/caballos-01.jpg",
           "titulo": "Libertad I",
           "tecnica": "Técnica Mixta",
@@ -160,31 +167,24 @@
           "fila": 2
         },
         {
-          "src": "/images/obras/caballos/caballos-04.jpg",
-          "titulo": "Libertad IV",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "160 x 70 cm",
-          "fila": 3
-        },
-        {
-          "src": "/images/obras/caballos/caballos-03.jpg",
-          "titulo": "Libertad III",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "120 x 200 cm",
-          "fila": 3
-        },
-        {
           "src": "/images/obras/caballos/caballos-06.jpg",
           "titulo": "Libertad VI",
           "tecnica": "Técnica Mixta",
           "dimensiones": "160 x 110 cm",
-          "fila": 4
+          "fila": 3
         },
         {
           "src": "/images/obras/caballos/caballos-07.jpg",
           "titulo": "Libertad VII",
           "tecnica": "Técnica Mixta",
           "dimensiones": "160 x 110 cm",
+          "fila": 3
+        },
+        {
+          "src": "/images/obras/caballos/caballos-04.jpg",
+          "titulo": "Libertad IV",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "160 x 70 cm",
           "fila": 4
         }
       ],
@@ -352,10 +352,10 @@
           "dimensiones": "70 x 280 cm"
         },
         {
-          "src": "/images/obras/de-norte-a-sur/de-norte-a-sur-02.jpg",
-          "titulo": "Salar",
+          "src": "/images/obras/de-norte-a-sur/de-norte-a-sur-09.jpg",
+          "titulo": "Atardecer en la Araucania",
           "tecnica": "Técnica Mixta",
-          "dimensiones": "50 x 150 cm"
+          "dimensiones": "70 x 280 cm"
         },
         {
           "src": "/images/obras/de-norte-a-sur/de-norte-a-sur-03.jpg",
@@ -394,12 +394,6 @@
           "dimensiones": "70 x 200 cm"
         },
         {
-          "src": "/images/obras/de-norte-a-sur/de-norte-a-sur-09.jpg",
-          "titulo": "Atardecer en la Araucania",
-          "tecnica": "Técnica Mixta",
-          "dimensiones": "70 x 280 cm"
-        },
-        {
           "src": "/images/obras/de-norte-a-sur/de-norte-a-sur-10.jpg",
           "titulo": "De lo Lagos",
           "tecnica": "Técnica Mixta",
@@ -410,6 +404,12 @@
           "titulo": "Aysén",
           "tecnica": "Técnica Mixta",
           "dimensiones": "70 x 200 cm"
+        },
+        {
+          "src": "/images/obras/de-norte-a-sur/de-norte-a-sur-02.jpg",
+          "titulo": "Salar",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "50 x 150 cm"
         }
       ]
     },
@@ -485,24 +485,6 @@
       "portada": "/images/obras/grabados/grabados-01-portada.jpg",
       "imagenes": [
         {
-          "src": "/images/obras/grabados/grabados-01.jpg",
-          "titulo": "Mujer I",
-          "tecnica": "Grabado",
-          "dimensiones": "39 x 28 cm"
-        },
-        {
-          "src": "/images/obras/grabados/grabados-02.jpg",
-          "titulo": "Mujer II",
-          "tecnica": "Grabado",
-          "dimensiones": "39 x 28 cm"
-        },
-        {
-          "src": "/images/obras/grabados/grabados-03.jpg",
-          "titulo": "Mujer III",
-          "tecnica": "Grabado",
-          "dimensiones": "39 x 28 cm"
-        },
-        {
           "src": "/images/obras/grabados/grabados-04.jpg",
           "titulo": "Mujer en Blancos I",
           "tecnica": "Impresión Digital Intervenida",
@@ -519,6 +501,24 @@
           "titulo": "Mujer en Blancos II",
           "tecnica": "Impresión Digital Intervenida",
           "dimensiones": "50 x 70 cm"
+        },
+        {
+          "src": "/images/obras/grabados/grabados-01.jpg",
+          "titulo": "Mujer I",
+          "tecnica": "Grabado",
+          "dimensiones": "39 x 28 cm"
+        },
+        {
+          "src": "/images/obras/grabados/grabados-02.jpg",
+          "titulo": "Mujer II",
+          "tecnica": "Grabado",
+          "dimensiones": "39 x 28 cm"
+        },
+        {
+          "src": "/images/obras/grabados/grabados-03.jpg",
+          "titulo": "Mujer III",
+          "tecnica": "Grabado",
+          "dimensiones": "39 x 28 cm"
         },
         {
           "src": "/images/obras/grabados/grabados-07.jpg",
