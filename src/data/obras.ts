@@ -8,7 +8,13 @@ export type ImagenObra = {
   fila?: number
 }
 
-export type Serie = { slug: string; titulo: string; portada?: string; imagenes: ImagenObra[] }
+export type Serie = {
+  slug: string
+  titulo: string
+  portada?: string
+  cuadricula?: boolean
+  imagenes: ImagenObra[]
+}
 
 export const series: Serie[] = obrasData.series as Serie[]
 

@@ -99,7 +99,13 @@ export default function SerieGaleria() {
           ))}
         </div>
       ) : imagenes.length > 0 ? (
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-8">
+        <div
+          className={
+            serie.cuadricula
+              ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 items-start'
+              : 'columns-1 sm:columns-2 lg:columns-3 gap-8'
+          }
+        >
           {imagenes.map((img, i) => {
             const area = areaDim(img.dimensiones)
             const escala = area ? Math.max(Math.sqrt(area / areaMaxima), ESCALA_MINIMA) : 1

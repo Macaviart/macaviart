@@ -527,6 +527,49 @@
           "dimensiones": null
         }
       ]
+    },
+    {
+      "slug": "obras-sobre-papel",
+      "titulo": "Obras sobre papel",
+      "cuadricula": true,
+      "imagenes": [
+        {
+          "src": "/images/obras/obras-sobre-papel/obras-sobre-papel-01.jpg",
+          "titulo": "Mujer I",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "76 x 57 cm"
+        },
+        {
+          "src": "/images/obras/obras-sobre-papel/obras-sobre-papel-02.jpg",
+          "titulo": "Mujer II",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "76 x 57 cm"
+        },
+        {
+          "src": "/images/obras/obras-sobre-papel/obras-sobre-papel-03.jpg",
+          "titulo": "Mujer III",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "76 x 57 cm"
+        },
+        {
+          "src": "/images/obras/obras-sobre-papel/obras-sobre-papel-04.jpg",
+          "titulo": "Mujer IV",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "76 x 57 cm"
+        },
+        {
+          "src": "/images/obras/obras-sobre-papel/obras-sobre-papel-05.jpg",
+          "titulo": "Mujer V",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "76 x 57 cm"
+        },
+        {
+          "src": "/images/obras/obras-sobre-papel/obras-sobre-papel-06.jpg",
+          "titulo": "Mujer VI",
+          "tecnica": "Técnica Mixta",
+          "dimensiones": "76 x 57 cm"
+        }
+      ]
     }
   ]
 }
